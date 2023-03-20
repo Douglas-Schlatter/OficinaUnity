@@ -19,6 +19,8 @@ public class Coin : MonoBehaviour {
         {
             isCath = true;
 
+            FindObjectOfType<AudioManager>().Play("Pegou Moeda");
+
             col.GetComponent<Player>().score += 1;
             Destroy(this.gameObject);
         }

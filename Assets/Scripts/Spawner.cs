@@ -25,7 +25,7 @@ public class Spawner : MonoBehaviour {
         {
             lSpawn = timer;
             target = Random.Range(0, 4);
-            Debug.Log("spwan");
+
             Instantiate(coin, spawnPos[target].transform.position, spawnPos[target].transform.rotation);
         }
 
