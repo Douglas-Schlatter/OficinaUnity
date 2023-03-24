@@ -100,7 +100,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 50985604664708048}
-  moveSpeed: 0
+  moveSpeed: 10
+  score: 0
+  scoreDisplay: {fileID: 0}
+  lifeDisplay: {fileID: 0}
+  life: 3
+  canGetHit: 1
+  timer: 0
+  lastHitSnap: -2
+  anim: {fileID: 0}
+  facRi: 1
 --- !u!212 &212095764007814266
 SpriteRenderer:
   m_ObjectHideFlags: 1

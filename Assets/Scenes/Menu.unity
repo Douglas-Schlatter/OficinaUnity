@@ -255,9 +255,15 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: Tema
     clip: {fileID: 8300000, guid: 807eda6cb09c85d4db7643693dafc1ad, type: 3}
-    volume: 0.5
+    volume: 0.4
     pitch: 1
     loop: 1
+    source: {fileID: 0}
+  - name: bad
+    clip: {fileID: 8300000, guid: 5c6c1f8a1e66be34ba5d628eddc3a5bc, type: 3}
+    volume: 0.5
+    pitch: 0.2
+    loop: 0
     source: {fileID: 0}
 --- !u!4 &874080191
 Transform:

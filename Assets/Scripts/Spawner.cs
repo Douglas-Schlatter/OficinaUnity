@@ -5,6 +5,12 @@ using UnityEngine;
 public class Spawner : MonoBehaviour {
 
     // Use this for initialization
+
+ 
+
+    public List<GameObject> grades;// spwaned enemies, at the moment in the scene
+    public int rGrad;
+    public int rSpwan;
     public List<GameObject> spawnPos;
     public GameObject coin;
     public int target;
@@ -21,12 +27,23 @@ public class Spawner : MonoBehaviour {
     private void FixedUpdate()
     {
         timer += Time.deltaTime;
-        if (timer - lSpawn > 1)
+        if (timer - lSpawn > 0.5)
         {
             lSpawn = timer;
             target = Random.Range(0, 4);
+            rSpwan = Random.Range(0, spawnPos.Count);
 
-            Instantiate(coin, spawnPos[target].transform.position, spawnPos[target].transform.rotation);
+            if (4 < Random.Range(0, 10))
+            {
+                rGrad = 1;
+            }
+            else
+            {
+                rGrad = 0;
+            }
+            
+            Instantiate(grades[rGrad], spawnPos[rSpwan].transform.position, spawnPos[rSpwan].transform.rotation);
+           
         }
 
         
