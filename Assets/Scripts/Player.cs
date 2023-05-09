@@ -17,7 +17,14 @@ public class Player : MonoBehaviour {
 
     //Text related
     public Text scoreDisplay;
-    public Text lifeDisplay;
+    //public Text lifeDisplay;
+
+    //life display related 
+    public Image Vida1;
+    public Image Vida2;
+    public Image Vida3;
+    public Sprite CoraçãoCheio;
+    public Sprite CoraçãoVazio;
 
 
     //Status Effects
@@ -45,7 +52,23 @@ public class Player : MonoBehaviour {
         {
             Flip();
         }
-    
+
+        if (life == 3)
+        {
+            Vida3.sprite = CoraçãoCheio;
+            Vida2.sprite = CoraçãoCheio;
+        }
+        if (life == 2)
+        {
+            Vida3.sprite = CoraçãoVazio;
+            Vida2.sprite = CoraçãoCheio;
+        }
+        else if (life == 1)
+        {
+            Vida2.sprite = CoraçãoVazio;
+        }
+
+
     }
     void FixedUpdate()
     {
@@ -55,7 +78,7 @@ public class Player : MonoBehaviour {
             canGetHit = true;
         }
         scoreDisplay.text = score.ToString();
-        lifeDisplay.text = life.ToString();
+        //lifeDisplay.text = life.ToString();
         if (life <= 0)
         {
             SceneManager.LoadScene(0);
